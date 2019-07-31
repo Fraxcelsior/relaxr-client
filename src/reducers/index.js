@@ -1,11 +1,6 @@
 import {combineReducers} from 'redux'
+import journal from './journal'
 
-
-export default function placHoldReducer() {
-  return console.log('I am a placeholder')
-}
-
-
-//combineReducers({
-    
- // })
+export default combineReducers ({
+  journal
+})
