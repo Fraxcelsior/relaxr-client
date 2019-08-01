@@ -9,9 +9,12 @@ export default function JournalDetails(props) {
         <div>
 
             <h1>Title: {props.journalDetails.title}</h1>
+            <div className='Container'>
+            <br></br>
             <h3>When: {props.journalDetails.created_at}</h3>
             <h3>What happened?</h3>
-            <p>{props.journalDetails.description}</p>
+            <p className='JournalContent'>{props.journalDetails.description}</p>
+            </div>
                 
         </div>
     )

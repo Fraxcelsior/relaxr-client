@@ -5,6 +5,22 @@
   width: 1920px;
   text-align: center;
 }
+.Breathing {
+  background-image: url('./images/beathing1.gif');
+  height: 480;
+  width: 480;
+}
+.Container {
+  margin-left: 30rem;
+  background-image: url('./images/ntbk.png');
+  height: 600px;
+  width: 900px;
+}
+
+.JournalContent {
+  margin-left: 18rem;
+  width: 400px;
+}
 
 li {
   list-style: none;

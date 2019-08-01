@@ -16,7 +16,7 @@ class JournalContainer extends Component {
         if (!this.props.journalList) return 'Loading...'
         return (
             <div>
-                <div className='container'>
+                <div>
                     <Journal
                         journals={this.props.journalList}
                        />
