@@ -5,6 +5,7 @@ import {withRouter} from 'react-router'
 import JournalContainer from './Journal/JournalContainer';
 import JournalDetailsContainer from './Journal/JournalDetailsContainer'
 import DashboardContainer from './Dashboard/DashboardContainer';
+import VideoContainer from './Videos/VideoContainer';
 
 function Routing(props) {
   return (<div>
@@ -12,6 +13,7 @@ function Routing(props) {
         <Route path="/dashboard" exact component={DashboardContainer} />
         <Route path="/journal" exact component={JournalContainer} />
         <Route path="/journal/:id" exact component={JournalDetailsContainer} />
+        <Route path="/videos" exact component={VideoContainer} />
         <Route path="" render={() => <Redirect to="/dashboard" />} />
       </Switch> 
   </div>)
