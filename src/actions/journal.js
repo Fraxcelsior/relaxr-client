@@ -1,5 +1,7 @@
 import request from 'superagent'
 
+const baseUrl = 'http://localhost:8000/api/journals'
+
 export const JOURNAL_FETCHED = 'JOURNAL_FETCHED'
 
 const journalFetched = (journal) => ({
@@ -9,7 +11,7 @@ const journalFetched = (journal) => ({
 
 export const fetchJournal = (id) => (dispatch) => {
     request
-        .get(`http://localhost:8000/api/journals`)
+        .get(`${baseUrl}`)
         .then(response =>{
             console.log('RESPONSE BODY:', response.body)
             dispatch(journalFetched(response.body))
@@ -26,10 +28,28 @@ const journalDetailsFetched = (journalDetails) => ({
 
 export const loadJournalDetails = (id) => (dispatch) => {
     request
-        .get(`http://localhost:8000/api/journals/${id}`)
+        .get(`${baseUrl}/${id}`)
         .then(response =>{
             console.log('RESPONSE BODY:', response.body)
             dispatch(journalDetailsFetched(response.body))
+        })
+        .catch(console.error)
+}
+
+export const JOURNAL_CREATED = 'JOURNAL_CREATED'
+
+const journalCreated = (journal) => ({
+    type: JOURNAL_CREATED,
+    payload: journal
+})
+
+export const createJournal = (data) => (dispatch) => {
+    console.log('DATA PASSED IS:', data)
+    request
+        .post(`${baseUrl}`)
+        .send(data)
+        .then(response => {
+            dispatch(journalCreated(response.body))
         })
         .catch(console.error)
 }
