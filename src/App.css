@@ -1,6 +1,8 @@
 .App {
   background-image: url('./images/zen2.png');
   background-color: rgb(245, 237, 227);
+  height: 1080px;
+  width: 1920px;
   text-align: center;
 }
 
