@@ -1,26 +1,30 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 
 export default class Journal extends Component {
     render() {
         return (
             <div>
-                <p>User: {this.props.details.name}</p>
-                <p>Journal</p>
-                <p>Diary entries:</p>
+                <p>User: Default</p>
+                <p>Journal entries:</p>
                 <ul>
-                    {this.props.details.journal.diary.map(entry =>
-                        <li key={entry.id}>Created at: {entry.dateTime}<br></br> Stress level: {entry.stress_level}<br></br> Description: {entry.description}</li>
+                    {this.props.journals.map(entry =>
+                        <li key={entry.id}><Link to={`/journal/${entry.id}`}>Title: {entry.title}<br></br>Posted at: {entry.created_at}</Link></li>
                     )}
                 </ul>
-                <p>List of videos:</p>
+                
+            </div>
+        )
+    }
+}
+
+/*
+<p>List of videos:</p>
                 <ul>
                     {this.props.details.journal.videos.map(vid =>
                         <iframe width="916" height="687" src={`https://www.youtube.com/embed/${vid}`} frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     )}
                 </ul>
                 {console.log('VIDURL!!!:', `https://www.youtube.com/embed/${this.props.details.journal.videos[1]}`)},
-            </div>
-        )
-    }
-}
-
+*/

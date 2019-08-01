@@ -13,12 +13,12 @@ class JournalContainer extends Component {
         this.props.fetchJournal(this.id)
     }
     render() {
-        if (!this.props.journalDetails) return 'Loading...'
+        if (!this.props.journalList) return 'Loading...'
         return (
             <div>
                 <div className='container'>
                     <Journal
-                        details={this.props.journalDetails}
+                        journals={this.props.journalList}
                        />
                 </div>
             </div>
@@ -28,7 +28,7 @@ class JournalContainer extends Component {
 
 
 const mapStateToProps = state => ({
-    journalDetails: state.journal
+    journalList: state.journal
     //lobby: state.lobby,
 })
 

@@ -9,7 +9,7 @@ const journalFetched = (journal) => ({
 
 export const fetchJournal = (id) => (dispatch) => {
     request
-        .get(`http://localhost:4000/test/${id}`)
+        .get(`http://localhost:8000/api/journals`)
         .then(response =>{
             console.log('RESPONSE BODY:', response.body)
             dispatch(journalFetched(response.body))
