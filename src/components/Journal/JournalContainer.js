@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Dashboard from './Dashboard'
+import Journal from './Journal'
 import {fetchJournal} from '../../actions/journal'
 
 
-class DashboardContainer extends Component {
+class JournalContainer extends Component {
 
     //id = this.props.match.params.id
     id = 1
@@ -17,7 +17,7 @@ class DashboardContainer extends Component {
         return (
             <div>
                 <div className='container'>
-                    <Dashboard
+                    <Journal
                         details={this.props.journalDetails}
                        />
                 </div>
@@ -32,4 +32,4 @@ const mapStateToProps = state => ({
     //lobby: state.lobby,
 })
 
-export default connect(mapStateToProps, {fetchJournal})(DashboardContainer)
+export default connect(mapStateToProps, {fetchJournal})(JournalContainer)

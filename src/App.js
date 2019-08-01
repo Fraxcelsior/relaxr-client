@@ -3,7 +3,7 @@ import store from './store'
 import {Provider} from 'react-redux'
 //import {Route} from 'react-router-dom'
 import './App.css'
-import DashboardContainer from './components/Dashboard/DashboardContainer';
+import JournalContainer from './components/Journal/JournalContainer';
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
         Hi there, let's get started!
-        < DashboardContainer/>
+        <JournalContainer />
         </div>
       </Provider>
     );
