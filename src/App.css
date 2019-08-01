@@ -7,9 +7,23 @@
 }
 
 li {
+  list-style: none;
   background-color: rgb(245, 237, 227);
-  margin: 1rem 1rem 1rem 40rem;
+  margin: 1rem 1rem 1rem 42rem;
   border-radius: 5px;
   padding: 1rem;
   max-width: 30rem;
+}
+a:link {
+  color: rgb(5, 3, 104);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(5, 3, 104);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(111, 149, 199);
 }

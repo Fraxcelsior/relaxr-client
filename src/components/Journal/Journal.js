@@ -10,7 +10,7 @@ export default class Journal extends Component {
                 <p>Journal entries:</p>
                 <ul>
                     {this.props.journals.map(entry =>
-                        <li key={entry.id}><Link to={`/journal/${entry.id}`}>Title: {entry.title}<br></br>Posted at: {entry.created_at}</Link></li>
+                        <li key={entry.id}><strong>Title: </strong><Link to={`/journal/${entry.id}`}>{entry.title}</Link><br></br><strong>Posted at: </strong>{entry.created_at}</li>
                     )}
                 </ul>
                 
