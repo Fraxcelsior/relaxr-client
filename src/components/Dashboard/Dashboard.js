@@ -10,6 +10,8 @@ export default class Dashboard extends Component {
                 <img src='https://media2.giphy.com/media/8YfwmT1T8PsfC/giphy.gif' alt='Breathing excercise' />
                 <br></br>
                 <Link to={'/journal'}> Go to your journal</Link>
+                <br></br>
+                <Link to={'/videos'}> Go to your relaxation videos</Link>
             </div>
         )
     }
